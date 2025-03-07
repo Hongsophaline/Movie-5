@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Promotions with JavaScript Slider</title>
+    <style>
+      /* Slider Styles */
+      .slider-container {
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+      }
+
+      .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slide {
+        min-width: 100%;
+        transition: opacity 1s ease-in-out;
+      }
+
+      /* Navigation Buttons */
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px;
+      }
+
+      .prev {
+        left: 10px;
+      }
+      .next {
+        right: 10px;
+      }
+
+      /* Dots */
+      .dots {
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        background: gray;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .active {
+        background: white;
+      }
+    </style>
+  </head>
+  
+  <div class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16 p-6 ">
+
+  <!-- Banner Slider -->
+  <div class="slider-container">
+    <div class="slider">
+      <img
+        src="../assets/Image/b1.png"
+        alt="Cinema Festival"
+        class="slide rounded-lg w-full h-screen"
+      />
+      <img
+        src="../assets/Image/b2.png"
+        alt="Our Movies"
+        class="slide rounded-lg w-full h-screen"
+      />
+      <img
+        src="../assets/Image/b3.png"
+        alt="Special Offers"
+        class="slide rounded-lg w-full h-screen"
+      />
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+
+    <div class="dots"></div>
+  </div>
+
+  <h2 class="text-2xl font-bold my-6">Promotions</h2>
+
+  <!-- Promotions Grid -->
+  <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <!-- Promo Card 1 -->
+    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+      <img
+        src="../assets/Image/cr1.png"
+        alt="Detective Chinatown"
+        class="rounded-lg mb-2"
+      />
+      <p class="text-gray-300 text-sm">
+        Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your
+        ticket now!
+      </p>
+    </div>
+
+    <!-- Promo Card 2 -->
+    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+      <img
+        src="../assets/Image/cr2.png"
+        alt="Horror Movie"
+        class="rounded-lg mb-2"
+      />
+      <p class="text-gray-300 text-sm">
+        Deadly Eyes is now screening! Don’t miss the biggest Khmer movie of the
+        year. Watch it at Legend Cinema now.
+      </p>
+    </div>
+
+    <!-- Promo Card 3 -->
+    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+      <img
+        src="../assets/Image/cr3.png"
+        alt="Detective Chinatown"
+        class="rounded-lg mb-2"
+      />
+      <p class="text-gray-300 text-sm">មើលឈ្នះ ញុំាឈ្នះត្រឡប់មកទៀតហើយ!</p>
+    </div>
+
+    <!-- Promo Card 4 -->
+    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+      <img
+        src="../assets/Image/cr4.png"
+        alt="Horror Movie"
+        class="rounded-lg mb-2"
+      />
+      <p class="text-gray-300 text-sm">
+        Every Tuesday Buy 1 Get 1 Ticket Via Membership Card.
+      </p>
+    </div>
+
+    <!-- Promo Card 5 -->
+    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+      <img
+        src="../assets/Image/cr5.png"
+        alt="Detective Chinatown"
+        class="rounded-lg mb-2"
+      />
+      <p class="text-gray-300 text-sm">
+        Try our new Matcha Popcorn at Legend Cinema! Make your movie time even
+        more delightful with this delicious treat.
+      </p>
+    </div>
+
+    <!-- Promo Card 6 -->
+    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+      <img
+        src="../assets/Image/cr1.png"
+        alt="Detective Chinatown"
+        class="rounded-lg mb-2"
+      />
+      <p class="text-gray-300 text-sm">
+        Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your
+        ticket now!
+      </p>
+    </div>
+   
+
+    <!-- JavaScript for Slider -->
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll(".slide");
+      const slider = document.querySelector(".slider");
+      const dotsContainer = document.querySelector(".dots");
+
+      // Create dots for each slide
+      slides.forEach((_, index) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (index === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll(".dot");
+
+      function showSlide(index) {
+        if (index >= slides.length) currentIndex = 0;
+        if (index < 0) currentIndex = slides.length - 1;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update active dot
+        dots.forEach((dot) => dot.classList.remove("active"));
+        dots[currentIndex].classList.add("active");
+      }
+
+      function nextSlide() {
+        currentIndex++;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex--;
+        showSlide(currentIndex);
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        showSlide(currentIndex);
+      }
+
+      // Auto-slide every 3 seconds
+      setInterval(nextSlide, 3000);
+
+      document.querySelector(".next").addEventListener("click", nextSlide);
+      document.querySelector(".prev").addEventListener("click", prevSlide);
+    </script>
+  </div>
+</html>
