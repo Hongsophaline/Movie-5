@@ -1,183 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home-page</title>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/Movie-5/src/ scripts/index.js"></script>
-</head>
-<body class="bg-gradient-to-b from-black to-purple-900 text-white">
-    <div class="flex flex-col lg:flex-row h-screen">
-        <div class="flex flex-col justify-center items-start p-8 lg:w-1/2 space-y-6">
-            <h1 class="text-4xl font-bold font-sans">Go ahead, stream free</h1>
-            <p class="text-lg">With Ple, you ca watch over 20,000 free movies and shows, plus Live TV on almost any device. What are you waiting for?</p>
-            <button class="bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-700 transition">Watch Now</button>
+  </head>
+  <body>
+    <nav class="bg-black border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/src/assets/Image/logo.png" class="h-15 w-20" alt="" />
+        </a>
+
+        <div class="flex md:order-2 space-x-4">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-[#F50404] dark:hover:bg-[#F50404] focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-[#F50404] rounded-lg text-sm p-2.5"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+
+          <div class="relative hidden md:block">
+            <form action="/" class="mb-1 flex justify-center" id="searchForm">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a movie..."
+                class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              />
+            </form>
+          </div>
+
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="bg-[#BA0ACA] hover:bg-[#F50404] font-bold text-white py-2 px-4 border border-lime-200 hover:border-transparent inline-flex rounded-full font-mono"
+          >
+            <svg
+              class="w-6 h-6 text-white dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Join Us
+          </button>
+        </div>
+
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-mono border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li></li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 md:dark:hover:text-[#BA0ACA] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 md:dark:hover:text-[#BA0ACA] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Cinema</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 dark:text-white md:dark:hover:text-[#BA0ACA] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Popular
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 dark:text-white md:dark:hover:text-[#BA0ACA] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Offer</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 dark:text-white md:dark:hover:text-[#BA0ACA] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >F&B</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bg-gradient-to-b from-black to-purple-900 text-white">
+      <div class="flex flex-col lg:flex-row h-screen">
+        <div
+          class="flex flex-col justify-center items-start p-8 lg:w-1/2 space-y-6"
+        >
+          <h1 class="text-4xl font-bold font-sans">Go ahead, stream free</h1>
+          <p class="text-lg">
+            With Ple, you ca watch over 20,000 free movies and shows, plus Live
+            TV on almost any device. What are you waiting for?
+          </p>
+          <button
+            class="bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-700 transition"
+          >
+            Watch Now
+          </button>
         </div>
         <div class="relative lg:w-1/2 h-64 lg:h-auto">
-            <video autoplay loop muted class="absolute inset-0 w-full h-full object-cover">
-                <source src="/Movie-5/src/assets/Image/home_hero_background_2024.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-white opacity-50"></div>
+          <video
+            autoplay
+            loop
+            muted
+            class="absolute inset-0 w-full h-full object-cover"
+          >
+            <source
+              src="/src/assets/Image/home_hero_background_2024.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-white opacity-50"
+          ></div>
         </div>
-    </div>
+      </div>
 
-    <div class="flex items-center gap-4 mt-4 px-10 text-xl font-bold">
+      <div class="flex items-center gap-4 mt-4 px-10 text-xl font-bold">
         <div>Now Showing</div>
         <div>/</div>
         <div>Coming Soon</div>
-    </div>
+      </div>
 
-    <div class="flex gap-4 mt-4 px-10 overflow-x-auto">
-        <div class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700">
-            <span class="text-white font-bold">Today</span>
-            <span class="text-gray-400">27 </span>
-            <span class="text-gray-400">Feb</span>
+      <div class="flex gap-4 mt-4 px-10 overflow-x-auto">
+        <div
+          class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700"
+        >
+          <span class="text-white font-bold">Today</span>
+          <span class="text-gray-400">27 </span>
+          <span class="text-gray-400">Feb</span>
         </div>
-        <div class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700">
-            <span class="text-white font-bold">Fir</span>
-            <span class="text-gray-400">28</span>
-            <span class="text-gray-400">Feb</span>
+        <div
+          class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700"
+        >
+          <span class="text-white font-bold">Fir</span>
+          <span class="text-gray-400">28</span>
+          <span class="text-gray-400">Feb</span>
         </div>
-        <div class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700">
-            <span class="text-white font-bold">Sun</span>
-            <span class="text-gray-400">1 </span>
-            <span class="text-gray-400">Feb</span>
+        <div
+          class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700"
+        >
+          <span class="text-white font-bold">Sun</span>
+          <span class="text-gray-400">1 </span>
+          <span class="text-gray-400">Feb</span>
         </div>
-        <div class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700">
-          <span class="text-white font-bold">   Sat</span>
+        <div
+          class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700"
+        >
+          <span class="text-white font-bold"> Sat</span>
           <span class="text-gray-400">2</span>
           <span class="text-gray-400">Mar</span>
+        </div>
+        <div
+          class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700"
+        >
+          <span class="text-white font-bold"> Mon</span>
+          <span class="text-gray-400">3</span>
+          <span class="text-gray-400">Mar</span>
+        </div>
       </div>
-      <div class="w-32 h-16 border rounded-lg flex flex-col items-center justify-center hover:border-purple-700">
-        <span class="text-white font-bold">    Mon</span>
-        <span class="text-gray-400">3</span>
-        <span class="text-gray-400">Mar</span>
-    </div>
-    </div>
+      <div class="container mx-auto py-10">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 movieContainer"
+        >
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-8 px-10">
-        <div class="bg-gray-800 rounded-lg overflow-hidden">
-            <img src="/Movie-5/src/assets/Image/momflash.png" alt="Movie" class="w-full  object-cover">
-            <div class="p-4">
-                <h3 class="text-lg font-semibold">27 Feb 2025</h3>
-                <p class="text-sm text-gray-400">Dark Mother 2</p>
-            </div>
         </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden">
-            <img src="/Movie-5/src/assets/Image/cleaner.png" alt="Movie" class="w-full  object-cover">
-            <div class="p-4">
-                <h3 class="text-lg font-semibold">27 Feb 2025</h3>
-                <p class="text-sm text-gray-400">Cleaner</p>
-            </div>
-        </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden">
-            <img src="/Movie-5/src/assets/Image/kompulko.png" alt="Movie" class="w-full  object-cover">
-            <div class="p-4">
-                <h3 class="text-lg font-semibold">26 Feb 2025</h3>
-                <p class="text-sm text-gray-400">Detective Chinatown 1900</p>
-            </div>
-        </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden">
-            <img src="/Movie-5/src/assets/Image/the 1st.png" alt="Movie" class="w-full  object-cover">
-            <div class="p-4">
-                <h3 class="text-lg font-semibold">26 Feb 2025</h3>
-                <p class="text-sm text-gray-400">IVE The First World Tour in Cinema</p>
-            </div>
-        </div>
-        <div class="bg-gray-800 rounded-lg overflow-hidden">
-          <img src="/Movie-5/src/assets/Image/gost.png" alt="Movie" class="w-full  object-cover">
-          <div class="p-4">
-              <h3 class="text-lg font-semibold">24 Feb 2025</h3>
-              <p class="text-sm text-gray-400">Yin Yang Mansion</p>
-          </div>
       </div>
-      <div class="bg-gray-800 rounded-lg overflow-hidden">
-          <img src="/Movie-5/src/assets/Image/homegost.png" alt="Movie" class="w-full  object-cover">
-          <div class="p-4">
-              <h3 class="text-lg font-semibold">21 Feb 2025</h3>
-              <p class="text-sm text-gray-400">Home Sweet Hell</p>
-          </div>
+
+      <div class="text-4xl flex items-center gap-4 mt-8 px-10 font-bold">
+        What's new?
       </div>
-      <div class="bg-gray-800 rounded-lg overflow-hidden">
-          <img src="/Movie-5/src/assets/Image/she eyes.png" alt="Movie" class="w-full  object-cover">
-          <div class="p-4">
-              <h3 class="text-lg font-semibold">20 Feb 2025</h3>
-              <p class="text-sm text-gray-400">Her Deadly Eyes</p>
-          </div>
-      </div>
-      <div class="bg-gray-800 rounded-lg overflow-hidden">
-          <img src="/Movie-5/src/assets/Image/hospital gost.png" alt="Movie" class="w-full  object-cover">
-          <div class="p-4">
-              <h3 class="text-lg font-semibold">17 Feb 2025</h3>
-              <p class="text-sm text-gray-400">Lembayung</p>
-          </div>
-      </div>
-      <div class="bg-gray-800 rounded-lg overflow-hidden">
-        <img src="/Movie-5/src/assets/Image/captan.png" alt="Movie" class="w-full  object-cover">
-        <div class="p-4">
-            <h3 class="text-lg font-semibold">13 Feb 2025</h3>
-            <p class="text-sm text-gray-400">Captain America: Brave New World</p>
-        </div>
-    </div>
-    <div class="bg-gray-800 rounded-lg overflow-hidden">
-        <img src="/Movie-5/src/assets/Image/chinese.png" alt="Movie" class="w-full  object-cover">
-        <div class="p-4">
-            <h3 class="text-lg font-semibold">6 Feb 2025</h3>
-            <p class="text-sm text-gray-400">Creation of the Gods II: Demon Force</p>
-        </div>
-    </div>
-    <div class="bg-gray-800 rounded-lg overflow-hidden">
-        <img src="/Movie-5/src/assets/Image/lions.png" alt="Movie" class="w-full  object-cover">
-        <div class="p-4">
-            <h3 class="text-lg font-semibold">22 Feb 2025</h3>
-            <p class="text-sm text-gray-400">Mufasa: The Lion King</p>
-        </div>
-    </div>
-    <div class="bg-gray-800 rounded-lg overflow-hidden">
-        <img src="/Movie-5/src/assets/Image/oddity.png" alt="Movie" class="w-full  object-cover">
-        <div class="p-4">
-            <h3 class="text-lg font-semibold">22 Feb 2025</h3>
-            <p class="text-sm text-gray-400">Oddity</p>
-        </div>
-    </div>
-    
-    </div>
-    <div class="text-4xl flex items-center gap-4 mt-8 px-10 font-bold">What's new?</div>
-    <div class="flex items-center justify-between p-8 flex-col md:flex-row bg-gradient-to-b from-black to-purple-900 text-white mt-4">
+      <div
+        class="flex items-center justify-between p-8 flex-col md:flex-row bg-gradient-to-b from-black to-purple-900 text-white mt-4"
+      >
         <div class="max-w-lg space-y-4 text-center md:text-left">
           <h1 class="text-5xl font-semibold">
-            Deadly Eyes is <br> now screening!....
+            Deadly Eyes is <br />
+            now screening!....
           </h1>
           <h2 class="text-sm text-white">
-            Deadly Eyes is now screening! Don’t <br>
-            miss the biggest Khmer movie of the <br>
+            Deadly Eyes is now screening! Don’t <br />
+            miss the biggest Khmer movie of the <br />
             year. Watch it at Legend Cinema now.
           </h2>
           <a href="#">
-            <button class="bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-700 transition mt-4">
+            <button
+              class="bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-700 transition mt-4"
+            >
               Watch Now
             </button>
           </a>
         </div>
-      
+
         <div class="mt-8 md:mt-0">
           <img
-            src="/Movie-5/src/assets/Image/img she -eye.png"
+            src="/src/assets/Image/img she -eye.png"
             alt="Relaxing Spa Woman"
             class="w-full md:w-[800px] h-auto rounded"
           />
         </div>
       </div>
 
-      <footer class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16">
-        <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <footer
+        class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16"
+      >
+        <div
+          class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+        >
           <div class="text-center md:text-left">
             <h2 class="w-[250px] mx-auto md:mx-0">
-              <img src="/Movie-5/src/assets/Image/logo.png" alt="Company Logo">
+              <img src="/src/assets/Image/logo.png" alt="Company Logo" />
             </h2>
             <div class="mt-4">
-              <select class="bg-gray-800 text-white p-2 rounded w-full sm:w-auto">
+              <select
+                class="bg-gray-800 text-white p-2 rounded w-full sm:w-auto"
+              >
                 <option value="kh">🇰🇭 Khmer</option>
                 <option value="en">🇬🇧 English</option>
                 <option value="th">🇹🇭 ไทย (Thai)</option>
@@ -215,34 +328,88 @@
           </div>
           <div class="text-center md:text-left">
             <h3 class="font-semibold text-lg">Follow Our Social Media</h3>
-            <div class="mt-4 flex flex-wrap justify-center md:justify-start gap-4">
+            <div
+              class="mt-4 flex flex-wrap justify-center md:justify-start gap-4"
+            >
               <a href="#" class="text-white hover:text-gray-400">
-                <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                <svg
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
                 </svg>
               </a>
               <a href="#" class="text-white hover:text-gray-400">
-                <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  
+                <svg
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                 </svg>
               </a>
               <a href="#" class="text-white hover:text-gray-400">
-                <svg class="h-8 w-8 text-white-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />  
-                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                <svg
+                  class="h-8 w-8 text-white-500"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                  />
                 </svg>
               </a>
               <a href="#" class="text-white hover:text-gray-400">
-                <svg class="h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
-                  <path stroke="none" d="M0 0h24v24H0z"/>  
-                  <path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497 -3.753C20.18 7.773 21.692 5.25 22 4.009z" />
+                <svg
+                  class="h-8 w-8"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497 -3.753C20.18 7.773 21.692 5.25 22 4.009z"
+                  />
                 </svg>
               </a>
               <a href="#" class="text-white hover:text-gray-400">
-                <svg class="h-8 w-8 text-white-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
-                  <path stroke="none" d="M0 0h24v24H0z"/>  
+                <svg
+                  class="h-8 w-8 text-white-500"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
                   <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
                 </svg>
               </a>
@@ -250,6 +417,104 @@
           </div>
         </div>
       </footer>
-      
-</body>
+    </div>
+    <script>
+      const apiKey = "1ce03b146042e74a956f83bc1a6393aa";
+      const movieContainer = document.querySelector(".movieContainer");
+      const searchForm = document.querySelector("#searchForm");
+      const searchInput = document.querySelector("#searchInput");
+
+     
+      function fetchMovies(query = "") {
+        const url = query
+          ? `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`
+          : `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data); // Debugging the data
+            const movies = data.results;
+            movieContainer.innerHTML = "";
+
+            if (movies && movies.length > 0) {
+              movies.forEach((movie) => {
+                const movieCard = document.createElement("div");
+                movieCard.classList.add(
+                  "bg-black",
+                  "rounded-sm",
+                  "overflow-hidden",
+                  "shadow-sm",
+                  "transition-transform",
+                  "duration-200",
+                  "transform",
+                  "hover:scale-95"
+                );
+
+                const movieLink = document.createElement("a");
+                movieLink.href = `src/page/movieDetails.html?id=${movie.id}`;
+                movieLink.target = "_self";
+
+                const moviePoster = document.createElement("img");
+                moviePoster.classList.add("w-50", "h-50", "object-cover");
+                moviePoster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+                moviePoster.alt = movie.title;
+                moviePoster.style.cursor = "pointer";
+
+                movieLink.appendChild(moviePoster);
+
+                const movieTitle = document.createElement("div");
+                movieTitle.classList.add(
+                  "font-semibold",
+                  "text-sm",
+                  "text-white-900"
+                );
+                movieTitle.innerText = movie.title;
+
+                const rating = document.createElement("div");
+                rating.classList.add("flex", "space-x-2");
+
+                const rate = document.createElement("span");
+                rate.classList.add("text-purple-800");
+                rate.innerText = `${movie.vote_average}/10`;
+
+                const year = document.createElement("span");
+                year.classList.add("text-red-800");
+                year.innerText = movie.release_date.split("-")[0];
+
+                rating.appendChild(rate);
+                rating.appendChild(year);
+
+                movieCard.appendChild(movieLink);
+                movieCard.appendChild(movieTitle);
+                movieCard.appendChild(rating);
+                movie.id;
+
+                movieContainer.appendChild(movieCard);
+              });
+            } else {
+              movieContainer.innerHTML =
+                '<p class="col-span-4 text-center text-xl text-gray-500">No movies found.</p>';
+            }
+          })
+          .catch((error) => {
+            console.error("Error fetching movies:", error);
+          });
+      }
+
+      fetchMovies();
+
+      searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const query = searchInput.value.trim();
+        if (query) {
+          fetchMovies(query); 
+        } else {
+          fetchMovies(); 
+        }
+      });
+
+     
+    </script>
+  </body>
 </html>
