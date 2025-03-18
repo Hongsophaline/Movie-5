@@ -1,31 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Join US</title>
-    <link rel="stylesheet" href="/src/style/Cinema.css">
-    
+    <link rel="stylesheet" href="/src/style/Cinema.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/src/style/Cinema.css">
+    <link rel="stylesheet" href="/src/style/Cinema.css" />
     <link rel="icon" href="../assets/Image/image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/Movie-5/src/ scripts/index.js"></script>
   </head>
   <body>
     <nav class="bg-black border-gray-200 dark:bg-gray-900">
-        <img src="/src/assets/Image/image.png" class="mx-auto block w-[100px] h-[80px]" alt="">
-        
-  </nav>
-  <div class="bg-gradient-to-tr from-purple-500 to-black min-h-screen">
-    
-      <p class="text-white font-bold ml-3 text-3xl "><a href="..." class="no-underline hover:underline text-gray-400">Home</a> /Log In</p>
-</div>
- 
-  
-  
-  
-  
+      <img
+        src="/src/assets/Image/logo.png"
+        class="mx-auto block w-[100px] h-[80px]"
+        alt=""
+      />
+    </nav>
+    <div class="bg-gradient-to-tr from-purple-500 to-black min-h-screen">
+      <p class="text-white font-bold ml-3 text-3xl">
+        <a href="/index.html" class="no-underline hover:text-white text-gray-400"
+          >Home</a
+        >
+        /Log In
+      </p>
+
+      <div class="flex items-center justify-center min-h-screen px-4">
+        <section
+          class="grid w-full max-w-[1100px] justify-center mt-5 bg-gray-900 grid-cols-1 overflow-hidden rounded-[0.625rem] border border-gray-light xl:grid-cols-2"
+        >
+          <div class="relative hidden lg:min-h-[628px] xl:block xl:min-h-[575px]">
+            <img
+              src="/src/assets/Image/king.jpg"
+              class="absolute top-0 h-full w-full object-cover"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col justify-center px-6 py-8">
+            <h1 class="text-gray-400  font-bold text-4xl">
+              <a href="" class="text-white underline">Log in</a> <a href="/src/page/sign.html">/ Sign up</a>
+            </h1>
+            <p class="text-white mt-3">You can use your phone number or username</p>
+      
+            <div
+              class="flex items-center overflow-hidden text-white rounded-full bg-gray-800 w-full max-w-sm p-1 mt-6 backdrop-blur-[2px]"
+            >
+              <button
+                class="h-[2.625rem] w-1/2 rounded-full bg-[#BA0ACA]  focus:outline-none text-white font-bold"
+              >
+                Username
+              </button>
+              <button
+                class="h-[2.625rem] w-1/2 rounded-full focus:outline-none text-white font-bold"
+              >
+                <a href="/src/page/Join.html">Phone Number</a>
+              </button>
+            </div>
+      
+            <div class="w-full max-w-md mt-6">
+              <form>
+                <div class="my-4">
+                  <label for="username" class=" text-white font-bold">Username</label>
+                  <div class="relative mt-2">
+                    <input
+                      id="username"
+                      type="text"
+                      autocomplete="off"
+                      class="w-full pr-3.5 py-4 pl-12 h-[50px] bg-transparent focus:outline-none text-white rounded-full border border-gray"
+                    />
+                    <div class="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm8-8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="my-4">
+                  <label for="password" class=" text-white font-bold">Password</label>
+                  <div class="relative mt-2">
+                    <input
+                      id="password"
+                      type="password"
+                      autocomplete="off"
+                      class="w-full pr-3.5 py-4 pl-12 h-[50px] bg-transparent focus:outline-none text-white rounded-full border border-gray"
+                    />
+                    <div class="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 1a3 3 0 0 0-3 3v2H3v8h10V6h-2V4a3 3 0 0 0-3-3Zm0 2a1 1 0 0 1 1 1v2H7V4a1 1 0 0 1 1-1ZM5 8h6v6H5V8Z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+      
+                <button type="button" class="ml-auto text-sm text-white font-bold">
+                  Forgot password?
+                </button>
+              </form>
+            </div>
+            <div class="flex justify-center">
+              <button
+                type="button"
+                class="bg-[#828282] hover:bg-[#F50404] justify-center font-bold text-white py-2 px-4 border border-lime-200 hover:border-transparent inline-flex rounded-full font-mono mt-3 w-[60%]"
+              >
+                Continue          
+              </button>
+            </div>
+            
+          </div>
+          
+        </section>
+      </div>
+      
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>

@@ -69,163 +69,372 @@
       }
     </style>
   </head>
+  <body>
+
+    <nav class="bg-black border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/src/assets/Image/logo.png" class="h-15 w-20" alt="" />
+        </a>
+
+        <div class="flex md:order-2 space-x-4">
+          <button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-[#F50404] dark:hover:bg-[#F50404] focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-[#F50404] rounded-lg text-sm p-2.5"
+          >
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>
+        
+          <div class="relative hidden md:block">
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+        
+          <button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+          </button>
+        
+          <button
+          type="button"
+          class="bg-[#BA0ACA] hover:bg-[#F50404] font-bold text-white py-2 px-4 border border-lime-200 hover:border-transparent inline-flex rounded-full font-mono"
+        >
+          <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
+          </svg>
+          <a href="/src/page/Join.html">Join Us</a>
+          
+        </button>
+        </div>
+        
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <div class="relative mt-3 md:hidden">
+            <input
+              type="text"
+              id="search-navbar"
+              class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search..."
+            />
+          </div>
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-mono border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+          <li></li>
+          <li>
+            <a
+              href="/index.html"
+              class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 md:dark:hover:text-[#BA0ACA] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/page/Cinema.html"
+              class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 md:dark:hover:text-[#BA0ACA] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >Cinema</a
+            >
+          </li>
+          <li>
+            <a
+              href="/src/page/Trending .html"
+              class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 dark:text-white md:dark:hover:text-[#BA0ACA] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              > Trending
+            </a>
+          </li>
+          <li>
+            <a
+              href="/src/page/Offer.html"
+              class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 dark:text-white md:dark:hover:text-[#BA0ACA] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >Offer</a
+            ></li>
+            <li>
+              <a
+                href="/src/page/F&B.html"
+                class="block py-2 px-3 text-white font-bold rounded-sm hover:bg-gray-700 md:hover:bg-transparent md:hover:text-[#BA0ACA] md:p-0 dark:text-white md:dark:hover:text-[#BA0ACA] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >F&B</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </nav>
   
-  <div class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16 p-6 ">
 
-  <!-- Banner Slider -->
-  <div class="slider-container">
-    <div class="slider">
-      <img
-        src="../assets/Image/b1.png"
-        alt="Cinema Festival"
-        class="slide rounded-lg w-full h-screen"
-      />
-      <img
-        src="../assets/Image/b2.png"
-        alt="Our Movies"
-        class="slide rounded-lg w-full h-screen"
-      />
-      <img
-        src="../assets/Image/b3.png"
-        alt="Special Offers"
-        class="slide rounded-lg w-full h-screen"
-      />
+       
+
+    <div class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16 p-6 ">
+      <!-- Banner Slider -->
+      <div class="slider-container h-[600px]">
+        <div class="slider">
+          <img
+            src="../assets/Image/b1.png"
+            alt="Cinema Festival"
+            class="slide rounded-lg w-full h-screen"
+          />
+          <img
+            src="../assets/Image/b2.png"
+            alt="Our Movies"
+            class="slide rounded-lg w-full h-screen"
+          />
+          <img
+            src="../assets/Image/b3.png"
+            alt="Special Offers"
+            class="slide rounded-lg w-full h-screen"
+          />
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="dots"></div>
+      </div>
+
+      <h2 class="text-2xl font-bold my-6">Promotions</h2>
+
+      <!-- Promotions Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+          <img src="../assets/Image/cr1.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+          <p class="text-gray-300 text-sm">Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your ticket now!</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+          <img src="../assets/Image/cr2.png" alt="Horror Movie" class="rounded-lg mb-2" />
+          <p class="text-gray-300 text-sm">Deadly Eyes is now screening! Don’t miss the biggest Khmer movie of the year. Watch it at Legend Cinema now.</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+          <img src="../assets/Image/cr3.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+          <p class="text-gray-300 text-sm">មើលឈ្នះ ញុំាឈ្នះត្រឡប់មកទៀតហើយ!</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+          <img src="../assets/Image/cr4.png" alt="Horror Movie" class="rounded-lg mb-2" />
+          <p class="text-gray-300 text-sm">Every Tuesday Buy 1 Get 1 Ticket Via Membership Card.</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+          <img src="../assets/Image/cr5.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+          <p class="text-gray-300 text-sm">Try our new Matcha Popcorn at Legend Cinema! Make your movie time even more delightful with this delicious treat.</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+          <img src="../assets/Image/cr1.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+          <p class="text-gray-300 text-sm">Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your ticket now!</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Navigation Buttons -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-
-    <div class="dots"></div>
-  </div>
-
-  <h2 class="text-2xl font-bold my-6">Promotions</h2>
-
-  <!-- Promotions Grid -->
-  <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-2 gap-6">
-    <!-- Promo Card 1 -->
-    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-      <img
-        src="../assets/Image/cr1.png"
-        alt="Detective Chinatown"
-        class="rounded-lg mb-2"
-      />
-      <p class="text-gray-300 text-sm">
-        Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your
-        ticket now!
-      </p>
+    <footer
+    class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16"
+  >
+    <div
+      class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+    >
+      <div class="text-center md:text-left">
+        <h2 class="w-[250px] mx-auto md:mx-0">
+          <img src="/src/assets/Image/logo.png" alt="Company Logo" />
+        </h2>
+        <div class="mt-4">
+          <select
+            class="bg-gray-800 text-white p-2 rounded w-full sm:w-auto"
+          >
+            <option value="kh">🇰🇭 Khmer</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="th">🇹🇭 ไทย (Thai)</option>
+            <option value="lo">🇱🇦 ລາວ (Lao)</option>
+            <option value="us">🇺🇸 English (USA)</option>
+            <option value="vn">🇻🇳 Tiếng Việt (Vietnamese)</option>
+            <option value="bn">🇧🇳 Bahasa Melayu (Brunei)</option>
+            <option value="it">🇮🇹 Italiano (Italian)</option>
+            <option value="jp">🇯🇵 日本語 (Japanese)</option>
+            <option value="kr">🇰🇷 한국어 (Korean)</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 text-center sm:text-left">
+        <div>
+          <h3 class="font-semibold text-lg">Company</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="/index.html" class="hover:underline">Home Page</a></li>
+            <li><a href="/src/page/Cinema.html" class="hover:underline">Cinema Page</a></li>
+            <li><a href="/src/page/Trending .html" class="hover:underline">Treding Page</a></li>
+            <li><a href="/src/page/Offer.html" class="hover:underline">Offer Page</a></li>
+            <li><a href="/src/page/F&B.html" class="hover:underline">F&B Page</a></li>
+            <li><a href="#" class="hover:underline">Contact Page</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">Movie</h3>
+          <ul class="mt-2 space-y-2">
+            <li><a href="#" class="hover:underline">Now Showing</a></li>
+            <li><a href="#" class="hover:underline">Coming Soon</a></li>
+            <li><a href="#" class="hover:underline">Cinemas</a></li>
+            <li><a href="#" class="hover:underline">News & Activity</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center md:text-left">
+        <h3 class="font-semibold text-lg">Follow Our Social Media</h3>
+        <div
+          class="mt-4 flex flex-wrap justify-center md:justify-start gap-4"
+        >
+          <a href="#" class="text-white hover:text-gray-400">
+            <svg
+              class="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-gray-400">
+            <svg
+              class="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-gray-400">
+            <svg
+              class="h-8 w-8 text-white-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+              />
+              <polygon
+                points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+              />
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-gray-400">
+            <svg
+              class="h-8 w-8"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <path
+                d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497 -3.753C20.18 7.773 21.692 5.25 22 4.009z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-gray-400">
+            <svg
+              class="h-8 w-8 text-white-500"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-
-    <!-- Promo Card 2 -->
-    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-      <img
-        src="../assets/Image/cr2.png"
-        alt="Horror Movie"
-        class="rounded-lg mb-2"
-      />
-      <p class="text-gray-300 text-sm">
-        Deadly Eyes is now screening! Don’t miss the biggest Khmer movie of the
-        year. Watch it at Legend Cinema now.
-      </p>
-    </div>
-
-    <!-- Promo Card 3 -->
-    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-      <img
-        src="../assets/Image/cr3.png"
-        alt="Detective Chinatown"
-        class="rounded-lg mb-2"
-      />
-      <p class="text-gray-300 text-sm">មើលឈ្នះ ញុំាឈ្នះត្រឡប់មកទៀតហើយ!</p>
-    </div>
-
-    <!-- Promo Card 4 -->
-    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-      <img
-        src="../assets/Image/cr4.png"
-        alt="Horror Movie"
-        class="rounded-lg mb-2"
-      />
-      <p class="text-gray-300 text-sm">
-        Every Tuesday Buy 1 Get 1 Ticket Via Membership Card.
-      </p>
-    </div>
-
-    <!-- Promo Card 5 -->
-    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-      <img
-        src="../assets/Image/cr5.png"
-        alt="Detective Chinatown"
-        class="rounded-lg mb-2"
-      />
-      <p class="text-gray-300 text-sm">
-        Try our new Matcha Popcorn at Legend Cinema! Make your movie time even
-        more delightful with this delicious .
-      </p>
-    </div>
-
-    <!-- Promo Card 6 -->
-    <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-      <img
-        src="../assets/Image/cr1.png"
-        alt="Detective Chinatown"
-        class="rounded-lg mb-2"
-      />
-      <p class="text-gray-300 text-sm">
-        Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your
-        ticket now!
-      </p>
-    </div>
-   
-
-    <!-- JavaScript for Slider -->
+  </footer>
     <script>
-      let currentIndex = 0;
-      const slides = document.querySelectorAll(".slide");
-      const slider = document.querySelector(".slider");
-      const dotsContainer = document.querySelector(".dots");
+      // JavaScript for slider functionality
+      let slideIndex = 0;
 
-      // Create dots for each slide
-      slides.forEach((_, index) => {
-        const dot = document.createElement("span");
-        dot.classList.add("dot");
-        if (index === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-      });
-
-      const dots = document.querySelectorAll(".dot");
+      const slides = document.querySelectorAll('.slide');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      const dotsContainer = document.querySelector('.dots');
 
       function showSlide(index) {
-        if (index >= slides.length) currentIndex = 0;
-        if (index < 0) currentIndex = slides.length - 1;
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        if (index >= slides.length) slideIndex = 0;
+        if (index < 0) slideIndex = slides.length - 1;
 
-        // Update active dot
-        dots.forEach((dot) => dot.classList.remove("active"));
-        dots[currentIndex].classList.add("active");
+        // Hide all slides
+        slides.forEach(slide => slide.style.display = 'none');
+        
+        // Show the current slide
+        slides[slideIndex].style.display = 'block';
+
+        // Update dot indicators
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[slideIndex].classList.add('active');
       }
 
-      function nextSlide() {
-        currentIndex++;
-        showSlide(currentIndex);
+      function createDots() {
+        slides.forEach((_, index) => {
+          const dot = document.createElement('span');
+          dot.classList.add('dot');
+          dot.addEventListener('click', () => {
+            slideIndex = index;
+            showSlide(slideIndex);
+          });
+          dotsContainer.appendChild(dot);
+        });
       }
 
-      function prevSlide() {
-        currentIndex--;
-        showSlide(currentIndex);
-      }
+      prevBtn.addEventListener('click', () => {
+        slideIndex--;
+        showSlide(slideIndex);
+      });
 
-      function goToSlide(index) {
-        currentIndex = index;
-        showSlide(currentIndex);
-      }
+      nextBtn.addEventListener('click', () => {
+        slideIndex++;
+        showSlide(slideIndex);
+      });
 
-      // Auto-slide every 3 seconds
-      setInterval(nextSlide, 3000);
-
-      document.querySelector(".next").addEventListener("click", nextSlide);
-      document.querySelector(".prev").addEventListener("click", prevSlide);
+      // Initialize
+      createDots();
+      showSlide(slideIndex);
     </script>
-  </div>
+  </body>
 </html>

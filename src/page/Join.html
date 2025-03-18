@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join US</title>
+    <link rel="stylesheet" href="/src/style/Cinema.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/style/Cinema.css" />
+    <link rel="icon" href="../assets/Image/image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/Movie-5/src/ scripts/index.js"></script>
+  </head>
+  <body>
+    <nav class="bg-black border-gray-200 dark:bg-gray-900">
+      <img
+        src="/src/assets/Image/logo.png"
+        class="mx-auto block w-[100px] h-[80px]"
+        alt=""
+      />
+    </nav>
+    <div class="bg-gradient-to-tr from-purple-500 to-black min-h-screen">
+      <p class="text-white font-bold ml-3 text-3xl">
+        <a href="/index.html" class="no-underline hover:text-white text-gray-400">Home</a>
+        /Log In
+      </p>
+
+      <div class="flex items-center justify-center min-h-screen px-4">
+        <section
+          class="grid w-full max-w-[1100px] justify-center mt-5 bg-gray-900 grid-cols-1 overflow-hidden rounded-[0.625rem] border border-gray-light xl:grid-cols-2"
+        >
+          <div
+            class="relative hidden lg:min-h-[628px] xl:block xl:min-h-[575px]"
+          >
+            <img
+              src="/src/assets/Image/king.jpg"
+              class="absolute top-0 h-full w-full object-cover"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col justify-center px-6 py-8">
+            <h1 class="text-white font-bold text-4xl">
+              <a href="" class="text-gray-400 underline">Log in</a> / Sign up
+            </h1>
+            <p class="text-white mt-3">
+              You can use your phone number or username
+            </p>
+
+            <div
+              class="flex items-center overflow-hidden text-white rounded-full bg-gray-800 w-full max-w-sm p-1 mt-6 backdrop-blur-[2px]"
+            >
+              <button
+                class="h-[2.625rem] w-1/2 rounded-full focus:outline-none text-white font-bold"
+              >
+                <a href="/src/page/JoinUs.html">Username</a>
+              </button>
+              <button
+                class="h-[2.625rem] w-1/2 rounded-full bg-[#BA0ACA] focus:outline-none text-white font-bold"
+              >
+                Phone Number
+              </button>
+            </div>
+
+            <div class="w-full max-w-md mt-9">
+              <form class="max-w-xs mx-auto">
+                <div class="relative">
+                  <span
+                    class="absolute start-0 bottom-3 text-gray-500 dark:text-gray-400"
+                  >
+                    Phone number
+                    <svg
+                      class="w-4 h-4 rtl:rotate-[270deg]"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 19 18"
+                    >
+                      <path
+                        d="M18 13.446a3.02 3.02 0 0 0-.946-1.985l-1.4-1.4a3.054 3.054 0 0 0-4.218 0l-.7.7a.983.983 0 0 1-1.39 0l-2.1-2.1a.983.983 0 0 1 0-1.389l.7-.7a2.98 2.98 0 0 0 0-4.217l-1.4-1.4a2.824 2.824 0 0 0-4.218 0c-3.619 3.619-3 8.229 1.752 12.979C6.785 16.639 9.45 18 11.912 18a7.175 7.175 0 0 0 5.139-2.325A2.9 2.9 0 0 0 18 13.446Z"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="number"
+                    id="floating-phone-number"
+                    class="block py-2.5 ps-6 pe-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder=" "
+                  />
+                  <label
+                    for="floating-phone-number"
+                    class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:start-6 peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                    >Phone number</label
+                  >
+                </div>
+              </form>
+              <div class="flex justify-center">
+                <button
+                  type="button"
+                  class="bg-[#828282] hover:bg-[#F50404] justify-center font-bold text-white py-2 px-4 border border-lime-200 hover:border-transparent inline-flex rounded-full font-mono mt-8 w-[60%]"
+                >
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>

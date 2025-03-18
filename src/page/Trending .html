@@ -3,15 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cinema</title>
-    <link rel="stylesheet" href="/src/style/Cinema.css">
-    
+    <title>Movie Search</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="../assets/Image/image.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/Movie-5/src/ scripts/index.js"></script>
   </head>
-  <body>
+  <body class="bg-gradient-to-b from-black to-purple-800 text-white" >
     <nav class="bg-black border-gray-200 dark:bg-gray-900">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -124,134 +119,19 @@
       
     </nav>
 
-<div class="bg-gradient-to-b from-black to-purple-800 text-white w-full ">
-    <figure class="max-w-lg mx-auto flex justify-center">
-        <img class="h-auto max-w-full md:max-w-[800px] rounded-lg mt-5" src="/src/assets/Image/po.jpg" alt="image description">
-      </figure>
-      
- <h1 class="text-white font-bold font-mono text-3xl ml-10 mt-7">Cinema:</h1>     
-    
- <form class="max-w-md ml-10 mt-4">   
-    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
-    <div class="relative">
-        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-            </svg>
-        </div>
-        <input type="search" id="default-search" class="block w-full sm:w-full md:w-[600px] lg:w-[800px] xl:w-[1000px] p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search location. . ." required />
-    </div>
-</form>
 
+    <!-- Trending Movies Section -->
+    <section class="p-8">
+      <h1 class="text-3xl font-bold mb-6 text-center">Trending Movies This Week</h1>
+      <div id="trending-movies" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"></div>
+    </section>
 
-
-<div class="flex flex-wrap gap-5 mt-5 ml-1 sm:ml-0 justify-center font-mono sm:flex-col md:flex-row">
-    <div class="w-full sm:max-w-xs md:max-w-sm bg-black border border-black rounded-lg shadow-sm dark:bg-black dark:border-white">
-        <a href="#">
-            <img class="rounded-t-lg w-full" src="/docs/images/blog/image-1.jpg" alt="" />
-        </a>
-        <div class="p-5">
-            <img src="/src/assets/Image/Sihanoukville.jpeg" class="rounded-lg w-full" alt="">
-            <p class="mb-3 mt-3 text-xl font-bold text-gray-700 dark:text-white">Cinimtic Cinema Toul kork</p>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                </svg>
-                <p class="text-white">Tk Avenue Mall, Street 315</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-full sm:max-w-xs md:max-w-sm bg-black border border-black rounded-lg shadow-sm dark:bg-black dark:border-white">
-        <a href="#">
-            <img class="rounded-t-lg w-full" src="/docs/images/blog/image-1.jpg" alt="" />
-        </a>
-        <div class="p-5">
-            <img src="/src/assets/Image/Sensok.jpeg" class="rounded-lg w-full" alt="">
-            <p class="mb-3 mt-3 text-xl font-bold text-gray-700 dark:text-white">Cinimtic Sen Sok</p>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                </svg>
-                <p class="text-white">4th Floor, Chip Mong SenSok Mall</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-full sm:max-w-xs md:max-w-sm bg-black border border-black rounded-lg shadow-sm dark:bg-black dark:border-white">
-        <a href="#">
-            <img class="rounded-t-lg w-full" src="/docs/images/blog/image-1.jpg" alt="" />
-        </a>
-        <div class="p-5">
-            <img src="/src/assets/Image/Siemreap.jpeg" class="rounded-lg w-full" alt="">
-            <p class="mb-3 mt-3 text-xl font-bold text-gray-700 dark:text-white">Cinimtic Midtown Mall</p>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                </svg>
-                <p class="text-white">1st Floor Midtown Mall</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="flex flex-wrap gap-5 mt-5 ml-1 sm:ml-0 justify-center sm:flex-col md:flex-row">
-    <div class="w-full sm:max-w-xs md:max-w-sm bg-black border border-black rounded-lg shadow-sm dark:bg-black dark:border-white">
-        <a href="#">
-            <img class="rounded-t-lg w-full" src="/docs/images/blog/image-1.jpg" alt="" />
-        </a>
-        <div class="p-5">
-            <img src="/src/assets/Image/Noro.jpeg" class="rounded-lg w-full" alt="">
-            <p class="mb-3 mt-3 text-xl font-bold text-gray-700 dark:text-white">Cinimtic Noro Mall</p>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                </svg>
-                <p class="text-white">5th Floor, Chip Mong Noro Mall</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-full sm:max-w-xs md:max-w-sm bg-black border border-black rounded-lg shadow-sm dark:bg-black dark:border-white">
-        <a href="#">
-            <img class="rounded-t-lg w-full" src="/docs/images/blog/image-1.jpg" alt="" />
-        </a>
-        <div class="p-5">
-            <img src="/src/assets/Image/Olymai.jpeg" class="rounded-lg w-full" alt="">
-            <p class="mb-3 mt-3 text-xl font-bold text-gray-700 dark:text-white">Cinimtic Olympia</p>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                </svg>
-                <p class="text-white">6th Floor, The Olympia Mall</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="w-full sm:max-w-xs md:max-w-sm bg-black border border-black rounded-lg shadow-sm dark:bg-black dark:border-white">
-        <a href="#">
-            <img class="rounded-t-lg w-full" src="/docs/images/blog/image-1.jpg" alt="" />
-        </a>
-        <div class="p-5">
-            <img src="/src/assets/Image/Premium.jpeg" class="rounded-lg w-full" alt="">
-            <p class="mb-3 mt-3 text-xl font-bold text-gray-700 dark:text-white">Cinimtic Premium Exchange </p>
-            <div class="flex items-center space-x-2">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
-                </svg>
-                <p class="text-white">Street 106, Corner of street 61</p>
-            </div>
-        </div>
-    </div>
-</div>
-<footer
+    <!-- Upcoming Movies Section -->
+    <section class="p-8">
+      <h1 class="text-3xl font-bold mb-6 text-center">Upcoming Movies</h1>
+      <div id="upcoming-movies" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"></div>
+    </section>
+    <footer
         class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16"
       >
         <div
@@ -392,6 +272,39 @@
         </div>
       </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+      const API_KEY = '1ce03b146042e74a956f83bc1a6393aa';
+
+      // Fetch and Render Movies Function
+      const fetchMovies = (url, containerId) => {
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const container = document.getElementById(containerId);
+            data.results.forEach(movie => {
+              const movieCard = document.createElement('div');
+              movieCard.classList.add('bg-gray-800', 'rounded-lg', 'overflow-hidden', 'shadow-lg', 'hover:scale-105', 'transition-transform', 'duration-300');
+
+              const img = document.createElement('img');
+              img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+              img.alt = movie.title;
+              img.classList.add('w-full', 'h-auto');
+
+              const title = document.createElement('h2');
+              title.textContent = movie.title;
+              title.classList.add('text-lg', 'font-semibold', 'p-4', 'text-center');
+
+              movieCard.appendChild(img);
+              movieCard.appendChild(title);
+              container.appendChild(movieCard);
+            });
+          })
+          .catch(error => console.error(`${containerId} Error:`, error));
+      };
+
+      // Fetch Trending and Upcoming Movies
+      fetchMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`, 'trending-movies');
+      fetchMovies(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`, 'upcoming-movies');
+    </script>
   </body>
 </html>
