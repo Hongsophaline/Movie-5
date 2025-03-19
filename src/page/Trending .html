@@ -272,39 +272,50 @@
         </div>
       </footer>
 
-    <script>
-      const API_KEY = '1ce03b146042e74a956f83bc1a6393aa';
-
-      // Fetch and Render Movies Function
-      const fetchMovies = (url, containerId) => {
-        fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            const container = document.getElementById(containerId);
-            data.results.forEach(movie => {
-              const movieCard = document.createElement('div');
-              movieCard.classList.add('bg-gray-800', 'rounded-lg', 'overflow-hidden', 'shadow-lg', 'hover:scale-105', 'transition-transform', 'duration-300');
-
-              const img = document.createElement('img');
-              img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-              img.alt = movie.title;
-              img.classList.add('w-full', 'h-auto');
-
-              const title = document.createElement('h2');
-              title.textContent = movie.title;
-              title.classList.add('text-lg', 'font-semibold', 'p-4', 'text-center');
-
-              movieCard.appendChild(img);
-              movieCard.appendChild(title);
-              container.appendChild(movieCard);
-            });
-          })
-          .catch(error => console.error(`${containerId} Error:`, error));
-      };
-
-      // Fetch Trending and Upcoming Movies
-      fetchMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`, 'trending-movies');
-      fetchMovies(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`, 'upcoming-movies');
-    </script>
+      <script>
+        const API_KEY = '1ce03b146042e74a956f83bc1a6393aa';
+      
+        // Fetch and Render Movies Function
+        const fetchMovies = (url, containerId) => {
+          fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              const container = document.getElementById(containerId);
+              data.results.forEach(movie => {
+                const movieCard = document.createElement('div');
+                movieCard.classList.add('bg-gray-800', 'rounded-lg', 'overflow-hidden', 'shadow-lg', 'hover:scale-105', 'transition-transform', 'duration-300');
+                
+                // Create an image element for the movie poster
+                const img = document.createElement('img');
+                img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+                img.alt = movie.title;
+                img.classList.add('w-full', 'h-auto');
+                
+                // Create a title for the movie
+                const title = document.createElement('h2');
+                title.textContent = movie.title;
+                title.classList.add('text-lg', 'font-semibold', 'p-4', 'text-center');
+      
+                // Add click event to the movie card to navigate to the movie details page
+                movieCard.addEventListener('click', () => {
+                  window.location.href = `movieDetails.html?id=${movie.id}`;
+                });
+      
+                // Append the image and title to the movie card
+                movieCard.appendChild(img);
+                movieCard.appendChild(title);
+      
+                // Append the movie card to the container
+                container.appendChild(movieCard);
+              });
+            })
+            .catch(error => console.error(`${containerId} Error:`, error));
+        };
+      
+        // Fetch Trending and Upcoming Movies
+        fetchMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`, 'trending-movies');
+        fetchMovies(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`, 'upcoming-movies');
+      </script>
+      
   </body>
 </html>

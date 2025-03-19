@@ -67,6 +67,22 @@
       .active {
         background: white;
       }
+      @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .opacity-0 {
+    opacity: 0;
+  }
     </style>
   </head>
   <body>
@@ -216,35 +232,44 @@
 
       <h2 class="text-2xl font-bold my-6">Promotions</h2>
 
-      <!-- Promotions Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-          <img src="../assets/Image/cr1.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
-          <p class="text-gray-300 text-sm">Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your ticket now!</p>
-        </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-          <img src="../assets/Image/cr2.png" alt="Horror Movie" class="rounded-lg mb-2" />
-          <p class="text-gray-300 text-sm">Deadly Eyes is now screening! Don’t miss the biggest Khmer movie of the year. Watch it at Legend Cinema now.</p>
-        </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-          <img src="../assets/Image/cr3.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
-          <p class="text-gray-300 text-sm">មើលឈ្នះ ញុំាឈ្នះត្រឡប់មកទៀតហើយ!</p>
-        </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-          <img src="../assets/Image/cr4.png" alt="Horror Movie" class="rounded-lg mb-2" />
-          <p class="text-gray-300 text-sm">Every Tuesday Buy 1 Get 1 Ticket Via Membership Card.</p>
-        </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-          <img src="../assets/Image/cr5.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
-          <p class="text-gray-300 text-sm">Try our new Matcha Popcorn at Legend Cinema! Make your movie time even more delightful with this delicious treat.</p>
-        </div>
-        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
-          <img src="../assets/Image/cr1.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
-          <p class="text-gray-300 text-sm">Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your ticket now!</p>
-        </div>
-      </div>
-    </div>
+    <!-- Promotions Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <!-- First Item -->
+  <div class="bg-gray-700 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-gray-600 hover:shadow-2xl hover:cursor-pointer opacity-0 animate-fadeIn">
+    <img src="../assets/Image/cr1.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+    <p class="text-gray-300 text-sm">Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your ticket now!</p>
+  </div>
 
+  <!-- Second Item -->
+  <div class="bg-gray-700 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-gray-600 hover:shadow-2xl hover:cursor-pointer opacity-0 animate-fadeIn">
+    <img src="../assets/Image/cr2.png" alt="Horror Movie" class="rounded-lg mb-2" />
+    <p class="text-gray-300 text-sm">Deadly Eyes is now screening! Don’t miss the biggest Khmer movie of the year. Watch it at Legend Cinema now.</p>
+  </div>
+
+  <!-- Third Item -->
+  <div class="bg-gray-700 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-gray-600 hover:shadow-2xl hover:cursor-pointer opacity-0 animate-fadeIn">
+    <img src="../assets/Image/cr3.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+    <p class="text-gray-300 text-sm">មើលឈ្នះ ញុំាឈ្នះត្រឡប់មកទៀតហើយ!</p>
+  </div>
+
+  <!-- Fourth Item -->
+  <div class="bg-gray-700 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-gray-600 hover:shadow-2xl hover:cursor-pointer opacity-0 animate-fadeIn">
+    <img src="../assets/Image/cr4.png" alt="Horror Movie" class="rounded-lg mb-2" />
+    <p class="text-gray-300 text-sm">Every Tuesday Buy 1 Get 1 Ticket Via Membership Card.</p>
+  </div>
+
+  <!-- Fifth Item -->
+  <div class="bg-gray-700 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-gray-600 hover:shadow-2xl hover:cursor-pointer opacity-0 animate-fadeIn">
+    <img src="../assets/Image/cr5.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+    <p class="text-gray-300 text-sm">Try our new Matcha Popcorn at Legend Cinema! Make your movie time even more delightful with this delicious treat.</p>
+  </div>
+
+  <!-- Sixth Item -->
+  <div class="bg-gray-700 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:bg-gray-600 hover:shadow-2xl hover:cursor-pointer opacity-0 animate-fadeIn">
+    <img src="../assets/Image/cr1.png" alt="Detective Chinatown" class="rounded-lg mb-2" />
+    <p class="text-gray-300 text-sm">Detective Chinatown 1900 is now showing in all Legend Cinemas, Get your ticket now!</p>
+  </div>
+</div>
     <footer
     class="bg-gradient-to-r from-black to-purple-800 text-white py-8 px-4 md:px-16"
   >
@@ -386,55 +411,83 @@
     </div>
   </footer>
     <script>
-      // JavaScript for slider functionality
       let slideIndex = 0;
 
-      const slides = document.querySelectorAll('.slide');
-      const prevBtn = document.querySelector('.prev');
-      const nextBtn = document.querySelector('.next');
-      const dotsContainer = document.querySelector('.dots');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.dots');
 
-      function showSlide(index) {
-        if (index >= slides.length) slideIndex = 0;
-        if (index < 0) slideIndex = slides.length - 1;
+// Create dots for the slider
+function createDots() {
+  slides.forEach((_, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    dot.addEventListener('click', () => showSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+}
 
-        // Hide all slides
-        slides.forEach(slide => slide.style.display = 'none');
-        
-        // Show the current slide
-        slides[slideIndex].style.display = 'block';
+// Show a specific slide
+function showSlide(index) {
+  if (index >= slides.length) slideIndex = 0;
+  if (index < 0) slideIndex = slides.length - 1;
 
-        // Update dot indicators
-        const dots = dotsContainer.querySelectorAll('.dot');
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[slideIndex].classList.add('active');
+  // Hide all slides
+  slides.forEach(slide => slide.style.opacity = 0);
+
+  // Show the current slide
+  slides[slideIndex].style.opacity = 1;
+
+  // Update active dot
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[slideIndex].classList.add('active');
+
+  // Adjust slider position to match active slide
+  const offset = -100 * slideIndex; // Move slides horizontally
+  document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+}
+
+// Show next slide
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex >= slides.length) slideIndex = 0;
+  showSlide(slideIndex);
+}
+
+// Show previous slide
+function prevSlide() {
+  slideIndex--;
+  if (slideIndex < 0) slideIndex = slides.length - 1;
+  showSlide(slideIndex);
+}
+
+// Initialize the slider
+createDots();
+showSlide(slideIndex);
+
+// Event listeners for navigation buttons
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+// Optional: Auto-slide functionality
+setInterval(nextSlide, 5000); // Slide every 5 seconds
+// Intersection Observer to detect when the elements enter the viewport
+const items = document.querySelectorAll('.opacity-0');
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0');
+        entry.target.classList.add('animate-fadeIn');
+        observer.unobserve(entry.target);
       }
+    });
+  }, { threshold: 0.5 });
 
-      function createDots() {
-        slides.forEach((_, index) => {
-          const dot = document.createElement('span');
-          dot.classList.add('dot');
-          dot.addEventListener('click', () => {
-            slideIndex = index;
-            showSlide(slideIndex);
-          });
-          dotsContainer.appendChild(dot);
-        });
-      }
+  items.forEach(item => observer.observe(item));
 
-      prevBtn.addEventListener('click', () => {
-        slideIndex--;
-        showSlide(slideIndex);
-      });
-
-      nextBtn.addEventListener('click', () => {
-        slideIndex++;
-        showSlide(slideIndex);
-      });
-
-      // Initialize
-      createDots();
-      showSlide(slideIndex);
     </script>
   </body>
 </html>

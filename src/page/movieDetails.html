@@ -16,52 +16,64 @@
       </div>
     </div>
 
-    <script>
-       // Your TMDB API key
-       const API_KEY = "your_api_key_here"; // Replace with your actual API key
+   <script>
+    // Your TMDB API key
+    const API_KEY = "your_api_key_here"; // Replace with your actual API key
 
-// Get the movie ID from the URL
-const urlParams = new URLSearchParams(window.location.search);
-const movieId = urlParams.get("id");
+    // Get the movie ID from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get("id");
 
-if (movieId) {
-  const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=1ce03b146042e74a956f83bc1a6393aa`;
+    if (movieId) {
+        const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=1ce03b146042e74a956f83bc1a6393aa`;
 
-  fetch(apiUrl)
-    .then((response) => response.json())
-    .then((data) => {
-      const movieInfoDiv = document.getElementById("movie-info");
-      movieInfoDiv.innerHTML = `
-        <div class="flex flex-col sm:flex-row items-center bg-purple-900 text-white p-8">
-          <div class="w-full sm:w-1/2">
-            <h2 class="text-3xl font-bold mb-4">${data.title}</h2>
-            <p class="text-lg"><strong>Genre:</strong> ${data.genres.map(genre => genre.name).join(', ')}</p>
-            <p class="text-lg"><strong>Release Date:</strong> ${data.release_date}</p>
-            <p class="text-lg"><strong>Runtime:</strong> ${data.runtime} minutes</p>
-            <p class="text-lg"><strong>Rating:</strong> ${data.vote_average}</p>
-            <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded mt-4">IMDb</button>
-          </div>
-          <div class="w-full sm:w-1/2">
-            <img class="rounded-lg shadow-md" 
-                 src="https://image.tmdb.org/t/p/w500${data.poster_path}" 
-                 alt="${data.title}">
-          </div>
-        </div>
-        <div class="bg-gray-800 text-white p-8">
-          <h2 class="text-2xl font-bold mb-4">Synopsis</h2>
-          <p class="text-lg">${data.overview}</p>
-        </div>
-      `;
-    })
-    .catch((error) => {
-      console.error("Error fetching movie data:", error);
-      document.getElementById("movie-info").innerHTML =
-        "<p class='text-red-500'>Error loading movie details.</p>";
-    });
-} else {
-  document.getElementById("movie-info").innerHTML =
-    "<p class='text-red-500'>No movie ID found in URL.</p>";
-}
-    </script>
+        fetch(apiUrl)
+            .then((response) => response.json())
+            .then((data) => {
+                const movieInfoDiv = document.getElementById("movie-info");
+                movieInfoDiv.innerHTML = `
+                    <div style="background-color: #1c1c1c; color: white; padding: 20px;">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                            <div style="flex-basis: 100%; max-width: calc(100% - 320px); margin-right: 20px;">
+                                <h2 style="font-size: 15px; margin-bottom: 10px;">${data.title}</h2>
+                                <p style="margin: 0;">Directed by ${data.credits ? data.credits.crew.find(crew => crew.job === 'Director').name : 'N/A'}</p>
+                                <div style="display: flex; align-items: center; margin-top: 10px;">
+                                    <span style="background-color: #333; color: white; padding: 5px; margin-right: 10px;">PG</span>
+                                    <span>${new Date(data.release_date).getFullYear()}</span>
+                                    <span>${Math.floor(data.runtime / 60)}h ${data.runtime % 60}m</span>
+                                    <span>${data.genres.map(genre => genre.name).join(', ')}</span>
+                                </div>
+                                <div style="display: flex; align-items: center; margin-top: 10px;">
+                                    <span style="color: #ffcc00;">★</span>
+                                    <span style="margin-left: 5px;">${data.vote_average.toFixed(1)}</span>
+                                    <span style="margin-left: 20px;">40%</span>
+                                    <span style="margin-left: 20px;">61%</span>
+                                </div>
+                                <button style="background-color: #fff; color: #000; border: none; padding: 10px 20px; margin-top: 20px; cursor: pointer; border-radius: 20px;">Watch Free</button>
+                                <div style="display: flex; align-items: center; margin-top: 10px;">
+                                    <i style="margin-right: 10px;">Bookmark Icon</i>
+                                    <i style="margin-right: 10px;">Checkmark Icon</i>
+                                    <i>Upload Icon</i>
+                                </div>
+                                <p style="margin-top: 15px; text-align: left;">${data.overview}</p>
+                                <a href="#" style="color: #ffcc00; text-decoration: none; margin-top: 20px;">More ▼</a>
+                            </div>
+                            <div style="flex-basis: 100%; max-width: 300px;">
+                                <img style="width: 100%; height: auto; border-radius: 5px;" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}">
+                            </div>
+                        </div>
+                    </div>
+                `;
+            })
+            .catch((error) => {
+                console.error("Error fetching movie data:", error);
+                document.getElementById("movie-info").innerHTML =
+                    "<p style='color: red;'>Error loading movie details.</p>";
+            });
+    } else {
+        document.getElementById("movie-info").innerHTML =
+            "<p style='color: red;'>No movie ID found in URL.</p>";
+    }
+</script>
   </body>
 </html>
